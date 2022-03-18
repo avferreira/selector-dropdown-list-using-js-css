@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Selector</title>
+    <style>
+        * {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+                         Roboto, Oxygen, Ubuntu, Cantarell, 
+                         'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background-color: lightseagreen;
+        }
+
+        input {
+            outline: none;
+            border: none;
+        }
+
+        .select-box {
+            width: max-content;
+        }
+
+        .select-field {
+            border: 1px solid rgb(187, 187, 187);
+        }
+
+        .down-arrow {
+            font-size: 1.2rem;
+            display: inline-block;
+            cursor: pointer;
+            transition: 0.2s linear;
+        }
+
+        .select-field,
+        .option,
+        .options-container {
+            width: 100%;
+            background-color: white;
+            padding: 0.3rem;
+        }
+
+        .options-container {
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+            display: none;
+            border: 1px solid rgb(187, 187, 187);
+        }
+
+        .options-container .option {
+            display: block;
+            padding-left: 0;
+
+            padding-top: 3px; 
+            padding-bottom: 3px;
+            cursor: pointer;
+        }
+
+        .options-container .option:hover {
+            background-color: #414b57;  /* aliceblue; */
+            color: aliceblue;
+        }
+
+        .options-container .option:hover .cep {
+            color: aliceblue;
+            font-weight: bold;
+        }
+
+        .options-container .option .cep {
+            color: blue;
+            font-weight: bold;
+        }
+
+        .option span {
+            float: right;
+            font-size: 0.7rem;
+            padding-top: 6px;
+            padding-left: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .rotate180 {
+            transform: rotate(-60deg);
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>Logradouros</h2> 
+
+    <div class="select-box">
+        <div class="select-field">
+            <input type="text" id="inputSelectField" size="80px" placeholder="Escolher o logradouro" class="input-selector" value="">
+            <span class="down-arrow">&blacktriangledown;</span>
+        </div>
+        
+        <!-- Container of checkboxes and options -->
+        <div class="options-container">
+            <label for="option1" class="option">
+                <input type="radio" name="radioLogradouro" id="option1">
+                Avenida Manoel Ribas - até 324/325
+                <span class="cep">80510-020</span>
+                <span>Curitiba/PR</span>
+                <span>São Francisco</span>
+            </label>
+            <label for="option2" class="option">
+                <input type="radio" name="radioLogradouro" id="option2">
+                Avenida Manoel Ribas - de 1829 a 3329 - lado ímpar
+                <span class="cep">80810-002</span>
+                <span>Curitiba/PR</span>
+                <span>Mercês</span>
+            </label>
+            <label for="option3" class="option">
+                <input type="radio" name="radioLogradouro" id="option3">
+                Avenida Manoel Ribas - de 1830 a 3330 - lado par
+                <span class="cep">80810-345</span>
+                <span>Curitiba/PR</span>
+                <span>Vista Alegre</span>
+            </label>
+            <label for="option4" class="option">
+                <input type="radio" name="radioLogradouro" id="option4">
+                Avenida Manoel Ribas - de 326/327 a 894/895
+                <span class="cep">80510-346</span>
+                <span>Curitiba/PR</span>
+                <span>Mercês</span>
+            </label>
+            <label for="option5" class="option">
+                <input type="radio" name="radioLogradouro" id="option5">
+                Avenida Manoel Ribas - de 3331/3332 a 4555/4556
+                <span class="cep">82025-160</span>
+                <span>Curitiba/PR</span>
+                <span>Cascatinha</span>
+            </label>
+            <label for="option6" class="option">
+                <input type="radio" name="radioLogradouro" id="option6">
+                Avenida Manoel Ribas - de 4557/4558 a 7369/7370
+                <span class="cep">82400-000</span>
+                <span>Curitiba/PR</span>
+                <span>Santa Felicidade</span>
+            </label>
+            <label for="option7" class="option">
+                <input type="radio" name="radioLogradouro" id="option7">
+                Avenida Manoel Ribas - de 7371/7372 ao fim
+                <span class="cep">82320-750</span>
+                <span>Curitiba/PR</span>
+                <span>Butiatuvinha</span>
+            </label>
+            <label for="option8" class="option">
+                <input type="radio" name="radioLogradouro" id="option8">
+                Avenida Manoel Ribas - de 896/897 a 1828/1829
+                <span class="cep">80810-000</span>
+                <span>Curitiba/PR</span>
+                <span>Mercês</span>
+            </label>
+            <label for="option9" class="option">
+                <input type="radio" name="radioLogradouro" id="option9">
+                Avenida Manoel Ribas, 5631 - AC Santa Felicidade
+                <span class="cep">82020-970</span>
+                <span>Curitiba/PR</span>
+                <span>Santa Felicidade</span>
+            </label>
+            <label for="option10" class="option">
+                <input type="radio" name="radioLogradouro" id="option10">
+                Avenida Manoel Ribas, 5631 Clique e Retire Correios - AC Santa Felicidade Clique e Retire
+                <span class="cep">82020-959</span>
+                <span>Curitiba/PR</span>
+                <span>Santa Felicidade</span>
+            </label>
+            <label for="option11" class="option">
+                <input type="radio" name="radioLogradouro" id="option11">
+                Rua Manoel Taborda Ribas
+                <span class="cep">81315-290</span>
+                <span>Curitiba/PR</span>
+                <span>Cidade Industrial</span>
+            </label>
+        </div>
+    </div>
+
+    <script>
+
+        /*
+        const selectedField    = document.querySelector(".select-field");
+        const inputSelectField = document.getElementById("inputSelectField");
+        const optionsContainer = document.querySelector(".options-container");
+        const optionsList      = document.querySelectorAll(".option");
+        
+        selectedField.addEventListener("click", () => {
+            optionsContainer.classList.toggle("show");
+            document.querySelector(".down-arrow").classList.toggle("rotate180");
+        });
+        
+        optionsList.forEach(o => {
+            o.addEventListener("click", () => {
+                inputSelectField.value = ((o.innerText || o.textContent)).replace(/\r?\n|\r/g, " ").replace(/\s+/g, ' ').trim();
+                optionsContainer.classList.remove("show");
+            });
+        });
+        */
+                
+        document.querySelector('.select-field').addEventListener("click", () => {
+            document.querySelector(".options-container").classList.toggle("show");
+            document.querySelector(".down-arrow").classList.toggle("rotate180");
+        });
+        
+        document.querySelectorAll(".option").forEach(o => { 
+            o.addEventListener("click", () => {
+                document.getElementById("inputSelectField").value = ((o.innerText || o.textContent)).replace(/\r?\n|\r/g, " ").replace(/\s+/g, ' ').trim();
+                document.querySelector(".options-container").classList.remove("show"); 
+            })
+        }); 
+        
+    </script>
+</body>
+
+</html>
