@@ -29,6 +29,10 @@
 
         .select-field {
             border: 1px solid rgb(187, 187, 187);
+
+            width: max-content;
+            background-color: white;
+            padding: 0.3rem;
         }
 
         .down-arrow {
@@ -38,7 +42,6 @@
             transition: 0.2s linear;
         }
 
-        .select-field,
         .option,
         .options-container {
             width: 100%;
@@ -66,15 +69,24 @@
             color: aliceblue;
         }
 
-        .options-container .option:hover .cep {
+        .options-container .option:hover .label-text {
             color: aliceblue;
             font-weight: bold;
         }
 
-        .options-container .option .cep {
+        .options-container .option .label-text {
             color: blue;
             font-weight: bold;
         }
+
+        /* ----- */
+        /*
+        .options-container .option .input-radio:checked ~ label {
+            font-size: 1rem;
+            display: block;
+            font-weight: bold;
+        }
+        */
 
         .option span {
             float: right;
@@ -107,79 +119,79 @@
         <!-- Container of checkboxes and options -->
         <div class="options-container">
             <label for="option1" class="option">
-                <input type="radio" name="radioLogradouro" id="option1">
+                <input type="radio" name="radioLogradouro" id="option1" class="input-radio">
                 Avenida Manoel Ribas - até 324/325
-                <span class="cep" >80510-020</span>
+                <span class="label-text">80510-020</span>
                 <span>Curitiba/PR</span>
                 <span>São Francisco</span>
             </label>
             <label for="option2" class="option">
-                <input type="radio" name="radioLogradouro" id="option2">
+                <input type="radio" name="radioLogradouro" id="option2" class="input-radio">
                 Avenida Manoel Ribas - de 1829 a 3329 - lado ímpar
-                <span class="cep">80810-002</span>
+                <span class="label-text">80810-002</span>
                 <span>Curitiba/PR</span>
                 <span>Mercês</span>
             </label>
             <label for="option3" class="option">
-                <input type="radio" name="radioLogradouro" id="option3">
+                <input type="radio" name="radioLogradouro" id="option3" class="input-radio">
                 Avenida Manoel Ribas - de 1830 a 3330 - lado par
-                <span class="cep">80810-345</span>
+                <span class="label-text">80810-345</span>
                 <span>Curitiba/PR</span>
                 <span>Vista Alegre</span>
             </label>
             <label for="option4" class="option">
-                <input type="radio" name="radioLogradouro" id="option4">
+                <input type="radio" name="radioLogradouro" id="option4" class="input-radio">
                 Avenida Manoel Ribas - de 326/327 a 894/895
-                <span class="cep">80510-346</span>
+                <span class="label-text">80510-346</span>
                 <span>Curitiba/PR</span>
                 <span>Mercês</span>
             </label>
             <label for="option5" class="option">
-                <input type="radio" name="radioLogradouro" id="option5">
+                <input type="radio" name="radioLogradouro" id="option5" class="input-radio">
                 Avenida Manoel Ribas - de 3331/3332 a 4555/4556
-                <span class="cep">82025-160</span>
+                <span class="label-text">82025-160</span>
                 <span>Curitiba/PR</span>
                 <span>Cascatinha</span>
             </label>
             <label for="option6" class="option">
-                <input type="radio" name="radioLogradouro" id="option6">
+                <input type="radio" name="radioLogradouro" id="option6" class="input-radio">
                 Avenida Manoel Ribas - de 4557/4558 a 7369/7370
-                <span class="cep">82400-000</span>
+                <span class="label-text">82400-000</span>
                 <span>Curitiba/PR</span>
                 <span>Santa Felicidade</span>
             </label>
             <label for="option7" class="option">
-                <input type="radio" name="radioLogradouro" id="option7">
+                <input type="radio" name="radioLogradouro" id="option7" class="input-radio">
                 Avenida Manoel Ribas - de 7371/7372 ao fim
-                <span class="cep">82320-750</span>
+                <span class="label-text">82320-750</span>
                 <span>Curitiba/PR</span>
                 <span>Butiatuvinha</span>
             </label>
             <label for="option8" class="option">
-                <input type="radio" name="radioLogradouro" id="option8">
+                <input type="radio" name="radioLogradouro" id="option8" class="input-radio">
                 Avenida Manoel Ribas - de 896/897 a 1828/1829
-                <span class="cep">80810-000</span>
+                <span class="label-text">80810-000</span>
                 <span>Curitiba/PR</span>
                 <span>Mercês</span>
             </label>
             <label for="option9" class="option">
-                <input type="radio" name="radioLogradouro" id="option9">
+                <input type="radio" name="radioLogradouro" id="option9" class="input-radio">
                 Avenida Manoel Ribas, 5631 - AC Santa Felicidade
-                <span class="cep">82020-970</span>
+                <span class="label-text">82020-970</span>
                 <span>Curitiba/PR</span>
                 <span>Santa Felicidade</span>
             </label>
             <label for="option10" class="option">
-                <input type="radio" name="radioLogradouro" id="option10">
+                <input type="radio" name="radioLogradouro" id="option10" class="input-radio">
                 Avenida Manoel Ribas, 5631 Clique e Retire Correios - AC Santa Felicidade Clique e Retire
-                <span class="cep">82020-959</span>
+                <span class="label-text">82020-959</span>
                 <span>Curitiba/PR</span>
                 <span>Santa Felicidade</span>
             </label>
             <label for="option11" class="option">
-                <input type="radio" name="radioLogradouro" id="option11">
+                <input type="radio" name="radioLogradouro" id="option11" class="input-radio">
                 Rua Manoel Taborda Ribas
-                <span class="cep">81315-290</span>
+                <span class="label-text">81315-290</span>
                 <span>Curitiba/PR</span>
                 <span>Cidade Industrial</span>
             </label>
@@ -189,26 +201,6 @@
     <a href="..\index.html">Voltar para a página Home</a>
 
     <script>
-
-        /*
-        const selectedField    = document.querySelector(".select-field");
-        const inputSelectField = document.getElementById("inputSelectField");
-        const optionsContainer = document.querySelector(".options-container");
-        const optionsList      = document.querySelectorAll(".option");
-        
-        selectedField.addEventListener("click", () => {
-            optionsContainer.classList.toggle("show");
-            document.querySelector(".down-arrow").classList.toggle("rotate180");
-        });
-        
-        optionsList.forEach(o => {
-            o.addEventListener("click", () => {
-                inputSelectField.value = ((o.innerText || o.textContent)).replace(/\r?\n|\r/g, " ").replace(/\s+/g, ' ').trim();
-                optionsContainer.classList.remove("show");
-            });
-        });
-        */
-                
         document.querySelector('.select-field').addEventListener("click", () => {
             document.querySelector(".options-container").classList.toggle("show");
             document.querySelector(".down-arrow").classList.toggle("rotate180");
@@ -217,10 +209,9 @@
         document.querySelectorAll(".option").forEach(o => { 
             o.addEventListener("click", () => {
                 document.getElementById("inputSelectField").value = ((o.innerText || o.textContent)).replace(/\r?\n|\r/g, " ").replace(/\s+/g, ' ').trim();
-                document.querySelector(".options-container").classList.remove("show"); 
+                //document.querySelector(".options-container").classList.remove("show"); 
             })
         }); 
-        
     </script>
 </body>
 

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de multi Select com checkbox - https://github.com/avferreira/selector-dropdown-list-using-js-css</title>
+    <style>
+        .multiSelect {
+            width: 200px;
+        }
+
+        .selectBox {
+            position: relative;
+        }
+
+        .selectBox select {            
+            width: max-content;
+            font-weight: bold;
+        }
+
+        .overSelect {
+            position: absolute;
+            left: 0; right: 0; top: 0; bottom: 0;
+        }
+        
+        .listOptions {
+            display: none;
+            border: 1px solid rgb(103, 31, 105);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .listOptions label {
+            display: block;            
+        }
+
+        .listOptions label:hover {
+            background-color: #1e90ff;
+        }
+
+        /* ---------- */
+
+        input[type=checkbox] + label {
+            color: #000;
+            font-style: italic;
+        } 
+
+        input[type=checkbox]:checked + label {
+            color: #f00;
+            font-style: normal;
+        }         
+
+
+
+    </style>
+</head>
+<body>
+    <h2>Exemplo de multi Select com checkbox</h2> 
+    <form action="">
+        <div class="multiSelect">
+            <div class="selectBox">
+                <select id="idSelectField">
+                    <option value="nenhum">Selecione uma opção</option>
+                </select>
+                <div class="overSelect"></div>
+            </div>
+            <div class="listOptions" id="checkBoxes">
+                <label for="option1" class="option"><input type="checkbox" id="option1"/>Primeira opção</label>
+                <label for="option2" class="option"><input type="checkbox" id="option2"/>Segunda opção</label>
+                <label for="option3" class="option"><input type="checkbox" id="option3"/>Terceira opção</label>
+                <label for="option4" class="option"><input type="checkbox" id="option4"/>Quarta opção</label>
+            </div>
+        </div>    
+    </form>
+    <br>
+    <a href="..\index.html">Voltar para a página Home</a>
+    <br>
+    <script>
+        function showCheckBoxes() {
+            var checkBoxes = document.getElementById("checkBoxes");
+            if (checkBoxes.style.display != "block") {
+                checkBoxes.style.display = "block";
+            } else {
+                checkBoxes.style.display = "none";
+            }
+        }
+        
+        document.querySelector('.selectBox').addEventListener("click", () => {
+            showCheckBoxes();
+        });
+
+    </script>
+</body>
+</html>
