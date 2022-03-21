@@ -55,6 +55,8 @@
             border: 1px solid rgb(187, 187, 187);
         }
 
+        
+        /*
         .options-container .option {
             display: block;
             padding-left: 0;
@@ -63,6 +65,26 @@
             padding-bottom: 3px;
             cursor: pointer;
         }
+        */
+
+        .options-container .option {
+            display: block; /* block; inline-flex; */
+            align-items: center;
+            cursor: pointer;
+
+            padding-left: 0;
+            padding-top: 3px; 
+            padding-bottom: 3px;            
+        }
+
+        /*
+        .radio-label {
+            width: max-content;
+            display: block; 
+            align-items: center;
+            cursor: pointer;
+        } 
+        */    
 
         .options-container .option:hover {
             background-color: #414b57; 
@@ -87,8 +109,20 @@
             font-weight: bold;
         }
         */
+        
+        .input-radio:checked + .checkbox_box {
+            font-weight: bold;
+            background-color: #414b57; 
+            color: aliceblue;
+        }
 
-        .option span {
+        .input-radio:checked + .label-text-right {
+            font-weight: bold;
+            background-color: #414b57; 
+            color: aliceblue;
+        }
+        
+        .option .label-text, .label-text-right {
             float: right;
             font-size: 0.7rem;
             padding-top: 6px;
@@ -96,6 +130,17 @@
             display: flex;
         }
 
+
+        /*
+        .option span {
+            float: right;
+            font-size: 0.7rem;
+            padding-top: 6px;
+            padding-left: 10px;
+            display: flex;
+        }
+        */
+        
         .show {
             display: block;
         }
@@ -103,6 +148,7 @@
         .rotate180 {
             transform: rotate(-60deg);
         }
+
     </style>
 
 </head>
@@ -120,80 +166,82 @@
         <div class="options-container">
             <label for="option1" class="option">
                 <input type="radio" name="radioLogradouro" id="option1" class="input-radio">
+                <span class="checkbox_box">
                 Avenida Manoel Ribas - até 324/325
                 <span class="label-text">80510-020</span>
-                <span>Curitiba/PR</span>
-                <span>São Francisco</span>
+                <span class="label-text-right">Curitiba/PR</span>
+                <span class="label-text-right">São Francisco</span>                
+                </span>
             </label>
             <label for="option2" class="option">
                 <input type="radio" name="radioLogradouro" id="option2" class="input-radio">
-                Avenida Manoel Ribas - de 1829 a 3329 - lado ímpar
+                <span class="checkbox_box">Avenida Manoel Ribas - de 1829 a 3329 - lado ímpar</span>
                 <span class="label-text">80810-002</span>
-                <span>Curitiba/PR</span>
-                <span>Mercês</span>
+                <span class="label-text-right">Curitiba/PR</span>
+                <span class="label-text-right">Mercês</span>                
             </label>
             <label for="option3" class="option">
                 <input type="radio" name="radioLogradouro" id="option3" class="input-radio">
-                Avenida Manoel Ribas - de 1830 a 3330 - lado par
+                <span class="checkbox_box">Avenida Manoel Ribas - de 1830 a 3330 - lado par</span>
                 <span class="label-text">80810-345</span>
-                <span>Curitiba/PR</span>
-                <span>Vista Alegre</span>
+                <span class="label-text-right">Curitiba/PR</span>
+                <span class="label-text-right">Vista Alegre</span>
             </label>
             <label for="option4" class="option">
                 <input type="radio" name="radioLogradouro" id="option4" class="input-radio">
-                Avenida Manoel Ribas - de 326/327 a 894/895
+                <span class="checkbox_box">Avenida Manoel Ribas - de 326/327 a 894/895</span>
                 <span class="label-text">80510-346</span>
-                <span>Curitiba/PR</span>
-                <span>Mercês</span>
+                <span class="label-text-right">Curitiba/PR</span>
+                <span class="label-text-right">Mercês</span>
             </label>
             <label for="option5" class="option">
                 <input type="radio" name="radioLogradouro" id="option5" class="input-radio">
-                Avenida Manoel Ribas - de 3331/3332 a 4555/4556
+                <span class="checkbox_box">Avenida Manoel Ribas - de 3331/3332 a 4555/4556</span>
                 <span class="label-text">82025-160</span>
-                <span>Curitiba/PR</span>
-                <span>Cascatinha</span>
+                <span class="label-text-right">Curitiba/PR</span>
+                <span class="label-text-right">Cascatinha</span>
             </label>
             <label for="option6" class="option">
                 <input type="radio" name="radioLogradouro" id="option6" class="input-radio">
-                Avenida Manoel Ribas - de 4557/4558 a 7369/7370
+                <span class="checkbox_box">Avenida Manoel Ribas - de 4557/4558 a 7369/7370</span>
                 <span class="label-text">82400-000</span>
-                <span>Curitiba/PR</span>
-                <span>Santa Felicidade</span>
+                <span class="label-text-right">Curitiba/PR</span>
+                <span class="label-text-right">Santa Felicidade</span>
             </label>
             <label for="option7" class="option">
                 <input type="radio" name="radioLogradouro" id="option7" class="input-radio">
-                Avenida Manoel Ribas - de 7371/7372 ao fim
+                <span class="checkbox_box">Avenida Manoel Ribas - de 7371/7372 ao fim</span>
                 <span class="label-text">82320-750</span>
-                <span>Curitiba/PR</span>
-                <span>Butiatuvinha</span>
+                <span class="label-text-right">Curitiba/PR</span>
+                <span class="label-text-right">Butiatuvinha</span>
             </label>
             <label for="option8" class="option">
                 <input type="radio" name="radioLogradouro" id="option8" class="input-radio">
-                Avenida Manoel Ribas - de 896/897 a 1828/1829
+                <span class="checkbox_box">Avenida Manoel Ribas - de 896/897 a 1828/1829</span>
                 <span class="label-text">80810-000</span>
-                <span>Curitiba/PR</span>
-                <span>Mercês</span>
+                <span class="label-text-right">Curitiba/PR</span>
+                <span class="label-text-right">Mercês</span>
             </label>
             <label for="option9" class="option">
                 <input type="radio" name="radioLogradouro" id="option9" class="input-radio">
-                Avenida Manoel Ribas, 5631 - AC Santa Felicidade
+                <span class="checkbox_box">Avenida Manoel Ribas, 5631 - AC Santa Felicidade</span>
                 <span class="label-text">82020-970</span>
-                <span>Curitiba/PR</span>
-                <span>Santa Felicidade</span>
+                <span class="label-text-right">Curitiba/PR</span>
+                <span class="label-text-right">Santa Felicidade</span>
             </label>
             <label for="option10" class="option">
                 <input type="radio" name="radioLogradouro" id="option10" class="input-radio">
-                Avenida Manoel Ribas, 5631 Clique e Retire Correios - AC Santa Felicidade Clique e Retire
+                <span class="checkbox_box">Avenida Manoel Ribas, 5631 Clique e Retire Correios - AC Santa Felicidade Clique e Retire</span>
                 <span class="label-text">82020-959</span>
-                <span>Curitiba/PR</span>
-                <span>Santa Felicidade</span>
+                <span class="label-text-right">Curitiba/PR</span>
+                <span class="label-text-right">Santa Felicidade</span>
             </label>
             <label for="option11" class="option">
                 <input type="radio" name="radioLogradouro" id="option11" class="input-radio">
-                Rua Manoel Taborda Ribas
+                <span class="checkbox_box">Rua Manoel Taborda Ribas</span>
                 <span class="label-text">81315-290</span>
-                <span>Curitiba/PR</span>
-                <span>Cidade Industrial</span>
+                <span class="label-text-right">Curitiba/PR</span>
+                <span class="label-text-right">Cidade Industrial</span>
             </label>
         </div>
     </div>

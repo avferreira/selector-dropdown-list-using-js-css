@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Custom Checkbox 001</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/dcode.css    ">
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/checkbox.css">
+    <style>
+        .checkbox {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;            
+        }
+
+        .checkbox_input {
+            display: none;            
+        }
+
+        .checkbox_box {
+            width: 1.25em;
+            height: 1.25em;
+            border: 2px solid #cccccc;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            flex-shrink: 0;
+
+            /* transition: background-color 0.15s, border-color 0.15s; */
+            
+        }
+
+        .checkbox_box::after {
+            content: '\2714';  /* simbolo checkmark */
+            color:#ffffff;
+
+            /*
+            transform: scale(0);
+            transition: transform 0.15s; 
+            */
+        }
+
+        .checkbox_input:checked + .checkbox_box {
+            background: #2266dc;
+            border-color: #2266dc;
+        }
+
+        /*
+        .checkbox_input:checked + .checkbox_box::after {
+           transition: scale(1);
+           border-color: #000000;
+        }
+        */
+
+    </style>
+</head>
+<body>
+    <h1>Custom checkbox</h1>
+</body>
+    <br>
+    <label class="checkbox" for="checkBoxId">
+        <input class="checkbox_input" type="checkbox" name = "checkBoxName" id="checkBoxId">
+        <div class="checkbox_box"></div>
+        Concordo, compartilhar informações
+    </label>
+    <br/><br>
+    <a href="..\index.html">Voltar para a página Home</a>
+</html>
