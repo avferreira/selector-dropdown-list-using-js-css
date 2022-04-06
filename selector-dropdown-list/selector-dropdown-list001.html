@@ -201,6 +201,7 @@
             o.addEventListener("click", () => {
                 document.getElementById("inputSelectField").value = ((o.innerText || o.textContent)).replace(/\r?\n|\r/g, " ").replace(/\s+/g, ' ').trim();
                 //document.querySelector(".options-container").classList.remove("show"); 
+                document.querySelector(".down-arrow").classList.toggle("rotate180"); 
             })
         }); 
     </script>
